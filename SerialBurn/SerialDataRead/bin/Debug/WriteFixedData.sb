@@ -1,0 +1,160 @@
+dim rc
+dim i
+//////////////////////////////////////////////////////////////////////////////////////
+//Admin Password Write
+/////////////////////////////////////////////////////////////////////////////////////
+#define ADMINPWDADDR 1    //Admin password write address
+#define PASSWDLEN 8
+#define WRITELEN 16
+
+
+dim Adminpwd$ as string
+dim PasswdVal$ as string
+dim PWDROOM$
+PWDROOM$ = "10510463 \02\02\CC\91\CA\1D\0E\12\65\16\07\10\61\1F\11\44"
+
+function GetAdminPwd() as integer
+	PasswdVal$ = left$(PWDROOM$,PASSWDLEN)
+	Adminpwd$ = right$(PWDROOM$,WRITELEN)
+endfunc 0
+
+function NvRecordWrt(byval pointer as integer,byref str$ as string)
+         dim  ln, ts$
+         ln = strlen(str$) 
+         if (ln+26) == sysinfo(632) then
+            if ln == 0 then
+               ts$="Hd"
+            else
+               ts$=""
+            endif
+           rc = NVRECORDSET(1000,ts$)
+        endif
+		rc = NVRECORDSET(pointer,str$)
+endfunc rc
+
+
+
+function AdminPwdOP() as integer
+	dim rdStr$
+	dim MAC$
+	dim len
+	dim str$
+	dim at$
+	at$ = SYSINFO$(4)
+	str$ = right$(at$,6)
+	str$ = strhexize$(str$)
+	len = strlen(str$)/2
+	for i = 0 to  len-1
+		MAC$ = MAC$ + mid$(str$,i*2,2)+":"
+	next
+	MAC$ =  left$(MAC$,17)
+	rc = GetAdminPwd()
+	rc = NvRecordWrt(ADMINPWDADDR,Adminpwd$)
+	rc = nvrecordget(ADMINPWDADDR, rdStr$)
+	print "Back Flash:",strhexize$(rdStr$),"\n"
+	print "Write PWD:",PasswdVal$,"\nMAC:",MAC$,"\n"
+endfunc 0
+
+////////////////////////////////////////////////////////////////////////////////
+//DS2465 Write DATA
+///////////////////////////////////////////////////////////////////////////////
+
+//all these data are 32 bytes long ,but we have to do CRC16 check, 
+//and we have to save the variable memory space, so we add 2 bytes 
+//after the data, then we can put the CRC16 read back from DS28E15 in there.
+//SO we should be very careful when we write the CRC16 into this array.
+dim MasterSecret [34] as integer
+//binding data and partial secret should be the same according to discussion ,save memory ,ready for all lock can be unlocked by one ikey
+dim Binding_Partial [34] as integer
+dim nHandle
+
+sub DataInit()
+	for i =0 to 31
+		MasterSecret[i] = i+5	
+		Binding_Partial [i] = 32 - i
+	next
+endsub
+	 
+sub InitGPIO()
+  //SPI settings
+  rc = gpiosetfunc(7,2,0x00)   //set SIO_7 as chip select signal for SPI ,CS
+  rc = gpiosetfunc(12,2,1)     //set SIO_12 as SLPZ for DS2465 
+  rc = gpiosetfunc(19,1,1)     //for the 1-wire detection
+  
+  rc = gpiosetfunc(29,1,2)     //just for test ,switch mode, operate or set
+  
+  rc = gpiosetfunc(3,2,0)  //DO for PWMA 
+  rc = gpiosetfunc(4,2,0)  //DO for AIN2 
+  rc = gpiosetfunc(5,2,0)  //DO for AIN1 
+  rc = gpiosetfunc(6,2,0)  //DO for STBY 
+  rc = gpiosetfunc(15,2,0) //DO for PWMB 
+  rc = gpiosetfunc(14,2,0) //DO for BIN2
+  rc = gpiosetfunc(13,2,0) //DO for BIN1
+  //  print"GPIO initialized.\n"
+	
+ endsub 
+ 
+ function delay(byval time) as integer
+   
+  dim time_elapsed as integer
+      time_elapsed = 0
+  dim StartTick,EndTick as integer
+      StartTick = 0
+	  EndTick = 0
+	  StartTick = GetTickCount()
+	  //print "delay tick:";StartTick;"\n"
+      while time >= time_elapsed   
+	    EndTick = GetTickCount()
+	    if EndTick >= StartTick then
+	       time_elapsed = EndTick - StartTick
+	    else
+	       time_elapsed = 0x7fffffff - StartTick + EndTick	
+		endif  
+	  endwhile
+endfunc 1
+
+FUNCTION DS2465Setup ()
+dim nRegValue
+    rc = I2COPEN (400000, 0, nHandle)
+	for i = 0 TO 31 
+	    rc = I2CWRITEREG8(0x18,i,MasterSecret[i]) 
+		rc = delay(2)
+    next
+	rc = delay(4)
+    //copy scratchpad ,to M-secret， M-secret天然就是read protection的,5A,copy scratchpad ，00，to m-secret
+	rc = I2CWRITEREG16(0x18, 0x60, 0x005A)
+	rc = delay(40)
+	
+	rc = I2CWRITEREG8(0x18,0x60,0xB4)
+	rc = delay(4)
+    for i = 0 to 31 
+	    rc = I2CWRITEREG8(0x18,i,Binding_Partial[i]) 
+    next
+	//5A copy scratchpad ,1000b,to user page 0, 0000b,full page, 
+    rc = I2CWRITEREG16(0x18, 0x60, 0x805A)
+	rc = delay(40)
+	  
+	//read from user page0 
+    I2CCLOSE(nhandle) 
+endfunc 1
+
+//////////////////////////////////////////////////////////////
+// main
+/////////////////////////////////////////////////////////////
+InitGPIO()
+DataInit()
+
+print "\nWill Write DS2465!!!\n"
+rc = DS2465Setup ()
+
+print "\nWill Write Admin password!!!\n"
+rc = AdminPwdOP()
+
+
+
+
+
+
+
+
+	

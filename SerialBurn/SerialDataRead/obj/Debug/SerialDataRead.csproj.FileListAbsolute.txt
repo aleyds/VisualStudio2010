@@ -1,0 +1,19 @@
+C:\Users\Tao\Documents\Visual Studio 2008\Projects\SerialDataRead\SerialDataRead\bin\Debug\SerialDataRead.exe
+C:\Users\Tao\Documents\Visual Studio 2008\Projects\SerialDataRead\SerialDataRead\bin\Debug\SerialDataRead.pdb
+C:\Users\Tao\Documents\Visual Studio 2008\Projects\SerialDataRead\SerialDataRead\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Tao\Documents\Visual Studio 2008\Projects\SerialDataRead\SerialDataRead\obj\Debug\SerialDataRead.Properties.Resources.resources
+C:\Users\Tao\Documents\Visual Studio 2008\Projects\SerialDataRead\SerialDataRead\obj\Debug\SerialDataRead.csproj.GenerateResource.Cache
+C:\Users\Tao\Documents\Visual Studio 2008\Projects\SerialDataRead\SerialDataRead\obj\Debug\SerialDataRead.exe
+C:\Users\Tao\Documents\Visual Studio 2008\Projects\SerialDataRead\SerialDataRead\obj\Debug\SerialDataRead.pdb
+C:\Users\Tao\Documents\Visual Studio 2008\Projects\SerialDataRead\SerialDataRead\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Tao\Documents\Visual Studio 2008\Projects\SerialDataRead\SerialDataRead\obj\Debug\SerialDataRead.WriteData.resources
+F:\BL600Source\smartBASIC程序烧写\SerialDataRead\SerialDataRead\obj\Debug\SerialDataRead.exe
+F:\BL600Source\smartBASIC程序烧写\SerialDataRead\SerialDataRead\obj\Debug\SerialDataRead.pdb
+G:\BL600Source\smartBASIC程序烧写\SerialDataRead\SerialDataRead\obj\Debug\SerialDataRead.exe
+G:\BL600Source\smartBASIC程序烧写\SerialDataRead\SerialDataRead\obj\Debug\SerialDataRead.pdb
+G:\BL600Source\smartBASIC程序烧写\SerialDataRead\SerialDataRead\bin\Debug\SerialDataRead.exe
+G:\BL600Source\smartBASIC程序烧写\SerialDataRead\SerialDataRead\bin\Debug\SerialDataRead.pdb
+G:\BL600Source\smartBASIC程序烧写\SerialDataRead\SerialDataRead\obj\Debug\ResolveAssemblyReference.cache
+G:\BL600Source\smartBASIC程序烧写\SerialDataRead\SerialDataRead\obj\Debug\SerialDataRead.WriteData.resources
+G:\BL600Source\smartBASIC程序烧写\SerialDataRead\SerialDataRead\obj\Debug\SerialDataRead.Properties.Resources.resources
+G:\BL600Source\smartBASIC程序烧写\SerialDataRead\SerialDataRead\obj\Debug\SerialDataRead.csproj.GenerateResource.Cache
