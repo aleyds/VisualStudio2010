@@ -15,5 +15,23 @@ namespace PrecisionCalc
         {
             InitializeComponent();
         }
+
+        private void FormSizeChange(object sender, EventArgs e)
+        {
+            int hight = this.Height;
+            int width = this.Width;
+
+
+        }
+
+        private void OnOpenCsvFileClick(object sender, EventArgs e)
+        {
+            if (openCSVFile.ShowDialog() == DialogResult.OK)
+            {
+                textCVSFileTxt.Text = openCSVFile.FileName;
+            }
+        }
+
+        
     }
 }
