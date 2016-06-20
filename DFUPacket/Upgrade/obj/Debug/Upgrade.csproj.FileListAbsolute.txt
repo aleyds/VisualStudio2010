@@ -1,0 +1,7 @@
+G:\VisualProgram\Upgrade\Upgrade\bin\Debug\Upgrade.exe
+G:\VisualProgram\Upgrade\Upgrade\bin\Debug\Upgrade.pdb
+G:\VisualProgram\Upgrade\Upgrade\obj\Debug\ResolveAssemblyReference.cache
+G:\VisualProgram\Upgrade\Upgrade\obj\Debug\Upgrade.Form1.resources
+G:\VisualProgram\Upgrade\Upgrade\obj\Debug\Upgrade.Properties.Resources.resources
+G:\VisualProgram\Upgrade\Upgrade\obj\Debug\Upgrade.exe
+G:\VisualProgram\Upgrade\Upgrade\obj\Debug\Upgrade.pdb

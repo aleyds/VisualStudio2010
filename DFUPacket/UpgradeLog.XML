@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Upgrade">
+</Property><Property Name="解决方案文件" Value="G:\VisualProgram\Upgrade\Upgrade.sln">
+</Property><Property Name="用户选项文件" Value="G:\VisualProgram\Upgrade\Upgrade.suo">
+</Property><Property Name="Date" Value="2016年6月15日">
+</Property><Property Name="Time" Value="14:05">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="Upgrade.sln" Description="文件已成功备份为 G:\VisualProgram\Upgrade\Backup\Upgrade.sln">
+</Event><Event ErrorLevel="0" Project="" Source="Upgrade.suo" Description="文件已成功备份为 G:\VisualProgram\Upgrade\Backup\Upgrade.suo">
+</Event><Event ErrorLevel="0" Project="Upgrade" Source="Upgrade\Upgrade.csproj" Description="项目文件已成功备份为 G:\VisualProgram\Upgrade\Backup\Upgrade\Upgrade.csproj">
+</Event><Event ErrorLevel="0" Project="Upgrade" Source="Upgrade\Upgrade.csproj.user" Description="项目用户文件成功备份为 G:\VisualProgram\Upgrade\Backup\Upgrade\Upgrade.csproj.user">
+</Event><Event ErrorLevel="0" Project="Upgrade" Source="Upgrade\Documents.cs" Description="文件已成功备份为 G:\VisualProgram\Upgrade\Backup\Upgrade\Documents.cs">
+</Event><Event ErrorLevel="0" Project="Upgrade" Source="Upgrade\Encrypt.cs" Description="文件已成功备份为 G:\VisualProgram\Upgrade\Backup\Upgrade\Encrypt.cs">
+</Event><Event ErrorLevel="0" Project="Upgrade" Source="Upgrade\Form1.cs" Description="文件已成功备份为 G:\VisualProgram\Upgrade\Backup\Upgrade\Form1.cs">
+</Event><Event ErrorLevel="0" Project="Upgrade" Source="Upgrade\Form1.Designer.cs" Description="文件已成功备份为 G:\VisualProgram\Upgrade\Backup\Upgrade\Form1.Designer.cs">
+</Event><Event ErrorLevel="0" Project="Upgrade" Source="Upgrade\Handler.cs" Description="文件已成功备份为 G:\VisualProgram\Upgrade\Backup\Upgrade\Handler.cs">
+</Event><Event ErrorLevel="0" Project="Upgrade" Source="Upgrade\PBKDF2_Engine.cs" Description="文件已成功备份为 G:\VisualProgram\Upgrade\Backup\Upgrade\PBKDF2_Engine.cs">
+</Event><Event ErrorLevel="0" Project="Upgrade" Source="Upgrade\Program.cs" Description="文件已成功备份为 G:\VisualProgram\Upgrade\Backup\Upgrade\Program.cs">
+</Event><Event ErrorLevel="0" Project="Upgrade" Source="Upgrade\Properties\AssemblyInfo.cs" Description="文件已成功备份为 G:\VisualProgram\Upgrade\Backup\Upgrade\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Upgrade" Source="Upgrade\Properties\Resources.Designer.cs" Description="文件已成功备份为 G:\VisualProgram\Upgrade\Backup\Upgrade\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="Upgrade" Source="Upgrade\Properties\Settings.Designer.cs" Description="文件已成功备份为 G:\VisualProgram\Upgrade\Backup\Upgrade\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="Upgrade" Source="Upgrade\Times.cs" Description="文件已成功备份为 G:\VisualProgram\Upgrade\Backup\Upgrade\Times.cs">
+</Event><Event ErrorLevel="0" Project="Upgrade" Source="Upgrade\Properties\Settings.settings" Description="文件已成功备份为 G:\VisualProgram\Upgrade\Backup\Upgrade\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="Upgrade" Source="Upgrade\repair_128px_1137582_easyicon.net.ico" Description="文件已成功备份为 G:\VisualProgram\Upgrade\Backup\Upgrade\repair_128px_1137582_easyicon.net.ico">
+</Event><Event ErrorLevel="0" Project="Upgrade" Source="Upgrade\Form1.resx" Description="文件已成功备份为 G:\VisualProgram\Upgrade\Backup\Upgrade\Form1.resx">
+</Event><Event ErrorLevel="0" Project="Upgrade" Source="Upgrade\Properties\Resources.resx" Description="文件已成功备份为 G:\VisualProgram\Upgrade\Backup\Upgrade\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="Upgrade" Source="Upgrade\Upgrade.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="Upgrade" Source="Upgrade\Upgrade.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="Upgrade.sln" Description="成功转换解决方案">
+</Event><Event ErrorLevel="3" Project="" Source="Upgrade.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Upgrade" Source="Upgrade\Upgrade.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event></UpgradeLog>

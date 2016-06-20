@@ -1,0 +1,4 @@
+G:\VisualProgram\Upgrade\Upgrade\obj\Release\ResolveAssemblyReference.cache
+G:\VisualProgram\Upgrade\Upgrade\obj\Release\Upgrade.Form1.resources
+G:\VisualProgram\Upgrade\Upgrade\obj\Release\Upgrade.Properties.Resources.resources
+G:\VisualProgram\Upgrade\Upgrade\obj\Release\Upgrade.csproj.GenerateResource.Cache
