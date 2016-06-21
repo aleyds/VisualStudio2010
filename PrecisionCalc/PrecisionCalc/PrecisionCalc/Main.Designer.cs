@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textCVSFileTxt = new System.Windows.Forms.TextBox();
             this.openCSVFileButton = new System.Windows.Forms.Button();
             this.openCSVFile = new System.Windows.Forms.OpenFileDialog();
             this.zedGraphControl = new ZedGraph.ZedGraphControl();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -59,12 +61,12 @@
             // 
             this.textCVSFileTxt.Location = new System.Drawing.Point(78, 6);
             this.textCVSFileTxt.Name = "textCVSFileTxt";
-            this.textCVSFileTxt.Size = new System.Drawing.Size(873, 21);
+            this.textCVSFileTxt.Size = new System.Drawing.Size(733, 21);
             this.textCVSFileTxt.TabIndex = 2;
             // 
             // openCSVFileButton
             // 
-            this.openCSVFileButton.Location = new System.Drawing.Point(975, 4);
+            this.openCSVFileButton.Location = new System.Drawing.Point(817, 4);
             this.openCSVFileButton.Name = "openCSVFileButton";
             this.openCSVFileButton.Size = new System.Drawing.Size(75, 23);
             this.openCSVFileButton.TabIndex = 3;
@@ -88,14 +90,24 @@
             this.zedGraphControl.ScrollMinX = 0D;
             this.zedGraphControl.ScrollMinY = 0D;
             this.zedGraphControl.ScrollMinY2 = 0D;
-            this.zedGraphControl.Size = new System.Drawing.Size(1054, 408);
+            this.zedGraphControl.Size = new System.Drawing.Size(873, 408);
             this.zedGraphControl.TabIndex = 4;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(711, 494);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "刷新";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1091, 562);
+            this.ClientSize = new System.Drawing.Size(904, 562);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.zedGraphControl);
             this.Controls.Add(this.openCSVFileButton);
             this.Controls.Add(this.textCVSFileTxt);
@@ -117,6 +129,7 @@
         private System.Windows.Forms.Button openCSVFileButton;
         private System.Windows.Forms.OpenFileDialog openCSVFile;
         private ZedGraph.ZedGraphControl zedGraphControl;
+        private System.Windows.Forms.Button button1;
     }
 }
 

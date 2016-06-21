@@ -56,7 +56,7 @@ namespace PrecisionCalc
         {
             GraphPane myPane = zedGraphControl.GraphPane;
             myPane.CurveList.Clear();
-            LineItem myCurve = myPane.AddCurve("Porsche", display, LineColor, SymbolType.Diamond);
+            LineItem myCurve = myPane.AddCurve("Porsche", display, LineColor, SymbolType.None);
             zedGraphControl.IsShowPointValues = true;
             myPane.AxisChange();
             zedGraphControl.Invalidate();
