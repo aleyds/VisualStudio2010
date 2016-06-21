@@ -33,6 +33,7 @@
             this.textCVSFileTxt = new System.Windows.Forms.TextBox();
             this.openCSVFileButton = new System.Windows.Forms.Button();
             this.openCSVFile = new System.Windows.Forms.OpenFileDialog();
+            this.zedGraphControl = new ZedGraph.ZedGraphControl();
             this.SuspendLayout();
             // 
             // label1
@@ -58,12 +59,12 @@
             // 
             this.textCVSFileTxt.Location = new System.Drawing.Point(78, 6);
             this.textCVSFileTxt.Name = "textCVSFileTxt";
-            this.textCVSFileTxt.Size = new System.Drawing.Size(489, 21);
+            this.textCVSFileTxt.Size = new System.Drawing.Size(873, 21);
             this.textCVSFileTxt.TabIndex = 2;
             // 
             // openCSVFileButton
             // 
-            this.openCSVFileButton.Location = new System.Drawing.Point(573, 6);
+            this.openCSVFileButton.Location = new System.Drawing.Point(975, 4);
             this.openCSVFileButton.Name = "openCSVFileButton";
             this.openCSVFileButton.Size = new System.Drawing.Size(75, 23);
             this.openCSVFileButton.TabIndex = 3;
@@ -76,11 +77,26 @@
             this.openCSVFile.FileName = "openFileDialog1";
             this.openCSVFile.Filter = "SCV文件|*.csv|所有文件|*.*";
             // 
+            // zedGraphControl
+            // 
+            this.zedGraphControl.Location = new System.Drawing.Point(14, 53);
+            this.zedGraphControl.Name = "zedGraphControl";
+            this.zedGraphControl.ScrollGrace = 0D;
+            this.zedGraphControl.ScrollMaxX = 0D;
+            this.zedGraphControl.ScrollMaxY = 0D;
+            this.zedGraphControl.ScrollMaxY2 = 0D;
+            this.zedGraphControl.ScrollMinX = 0D;
+            this.zedGraphControl.ScrollMinY = 0D;
+            this.zedGraphControl.ScrollMinY2 = 0D;
+            this.zedGraphControl.Size = new System.Drawing.Size(1054, 408);
+            this.zedGraphControl.TabIndex = 4;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 562);
+            this.ClientSize = new System.Drawing.Size(1091, 562);
+            this.Controls.Add(this.zedGraphControl);
             this.Controls.Add(this.openCSVFileButton);
             this.Controls.Add(this.textCVSFileTxt);
             this.Controls.Add(this.label2);
@@ -100,6 +116,7 @@
         private System.Windows.Forms.TextBox textCVSFileTxt;
         private System.Windows.Forms.Button openCSVFileButton;
         private System.Windows.Forms.OpenFileDialog openCSVFile;
+        private ZedGraph.ZedGraphControl zedGraphControl;
     }
 }
 

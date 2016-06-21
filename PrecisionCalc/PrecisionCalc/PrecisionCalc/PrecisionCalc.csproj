@@ -44,8 +44,12 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="ZedGraph">
+      <HintPath>.\ZedGraph.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CSV\CSVFileHelper.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
