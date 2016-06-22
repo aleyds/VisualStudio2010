@@ -66,11 +66,22 @@ namespace PrecisionCalc
         {
             if (openCSVFile.ShowDialog() == DialogResult.OK)
             {
-                textCVSFileTxt.Text = openCSVFile.FileName;
-                DataTable dt = new DataTable();
-                CSVFileHelper.ReadCSV(openCSVFile.FileName,0,dt);
-                PointPairList displayList = PaneFill(dt);
-                PaneDisplay(displayList, Color.Red);
+                string[] FileNames = openCSVFile.FileNames;
+                textCVSFileTxt.Text = "";
+                for (int i = 0; i < FileNames.Length; i++)
+                {
+                    textCVSFileTxt.Text += FileNames[i]+";";
+                }
+
+                for (int i = 0; i < FileNames.Length; i++)
+                {
+                    DataTable dt = new DataTable();
+                    CSVFileHelper.ReadCSV(FileNames[i], 0, dt);
+                    PointPairList displayList = PaneFill(dt);
+                    PaneDisplay(displayList, Color.Red);
+                }
+                
+               
             }
         }
 

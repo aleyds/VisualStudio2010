@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textCVSFileTxt = new System.Windows.Forms.TextBox();
@@ -78,6 +77,7 @@
             // 
             this.openCSVFile.FileName = "openFileDialog1";
             this.openCSVFile.Filter = "SCV文件|*.csv|所有文件|*.*";
+            this.openCSVFile.Multiselect = true;
             // 
             // zedGraphControl
             // 
