@@ -59,7 +59,22 @@
             this.label10 = new System.Windows.Forms.Label();
             this.FileInfoText = new System.Windows.Forms.RichTextBox();
             this.PacketData = new System.Windows.Forms.RichTextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.MCUComboBox = new System.Windows.Forms.ComboBox();
+            this.FingerComboBox = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.PasswordComboBox = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.WifiComboBox = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.RFIDComboBox = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.HardwareForm = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.AlarmCheckBox = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -149,7 +164,6 @@
             this.HardwareVersion.Name = "HardwareVersion";
             this.HardwareVersion.Size = new System.Drawing.Size(174, 21);
             this.HardwareVersion.TabIndex = 15;
-            this.HardwareVersion.Text = "0x00";
             // 
             // SoftwareVersion
             // 
@@ -350,11 +364,194 @@
             this.PacketData.TabIndex = 15;
             this.PacketData.Text = "";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(18, 28);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(41, 12);
+            this.label12.TabIndex = 18;
+            this.label12.Text = "主芯片";
+            // 
+            // MCUComboBox
+            // 
+            this.MCUComboBox.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.MCUComboBox.AutoCompleteCustomSource.AddRange(new string[] {
+            "nrf51822 AA",
+            "nrf51822 AC"});
+            this.MCUComboBox.DisplayMember = "0";
+            this.MCUComboBox.FormattingEnabled = true;
+            this.MCUComboBox.Items.AddRange(new object[] {
+            "nrf51822 AA",
+            "nrf51822 AC"});
+            this.MCUComboBox.Location = new System.Drawing.Point(65, 22);
+            this.MCUComboBox.Name = "MCUComboBox";
+            this.MCUComboBox.Size = new System.Drawing.Size(174, 20);
+            this.MCUComboBox.TabIndex = 19;
+            this.MCUComboBox.TabStop = false;
+            // 
+            // FingerComboBox
+            // 
+            this.FingerComboBox.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.FingerComboBox.AutoCompleteCustomSource.AddRange(new string[] {
+            "nrf51822 AA",
+            "nrf51822 AC"});
+            this.FingerComboBox.DisplayMember = "0";
+            this.FingerComboBox.FormattingEnabled = true;
+            this.FingerComboBox.Items.AddRange(new object[] {
+            "无",
+            "艾迪数通",
+            "霸凌"});
+            this.FingerComboBox.Location = new System.Drawing.Point(65, 48);
+            this.FingerComboBox.Name = "FingerComboBox";
+            this.FingerComboBox.Size = new System.Drawing.Size(174, 20);
+            this.FingerComboBox.TabIndex = 21;
+            this.FingerComboBox.TabStop = false;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(6, 53);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(53, 12);
+            this.label13.TabIndex = 20;
+            this.label13.Text = "指纹模块";
+            // 
+            // PasswordComboBox
+            // 
+            this.PasswordComboBox.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.PasswordComboBox.AutoCompleteCustomSource.AddRange(new string[] {
+            "nrf51822 AA",
+            "nrf51822 AC"});
+            this.PasswordComboBox.DisplayMember = "0";
+            this.PasswordComboBox.FormattingEnabled = true;
+            this.PasswordComboBox.Items.AddRange(new object[] {
+            "无",
+            "TTY6952"});
+            this.PasswordComboBox.Location = new System.Drawing.Point(65, 74);
+            this.PasswordComboBox.Name = "PasswordComboBox";
+            this.PasswordComboBox.Size = new System.Drawing.Size(174, 20);
+            this.PasswordComboBox.TabIndex = 23;
+            this.PasswordComboBox.TabStop = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(6, 78);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(53, 12);
+            this.label14.TabIndex = 22;
+            this.label14.Text = "密码模块";
+            // 
+            // WifiComboBox
+            // 
+            this.WifiComboBox.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.WifiComboBox.AutoCompleteCustomSource.AddRange(new string[] {
+            "nrf51822 AA",
+            "nrf51822 AC"});
+            this.WifiComboBox.DisplayMember = "0";
+            this.WifiComboBox.FormattingEnabled = true;
+            this.WifiComboBox.Items.AddRange(new object[] {
+            "无",
+            "CC3100"});
+            this.WifiComboBox.Location = new System.Drawing.Point(65, 99);
+            this.WifiComboBox.Name = "WifiComboBox";
+            this.WifiComboBox.Size = new System.Drawing.Size(174, 20);
+            this.WifiComboBox.TabIndex = 25;
+            this.WifiComboBox.TabStop = false;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(6, 103);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(53, 12);
+            this.label15.TabIndex = 24;
+            this.label15.Text = "wifi模块";
+            // 
+            // RFIDComboBox
+            // 
+            this.RFIDComboBox.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.RFIDComboBox.AutoCompleteCustomSource.AddRange(new string[] {
+            "nrf51822 AA",
+            "nrf51822 AC"});
+            this.RFIDComboBox.DisplayMember = "0";
+            this.RFIDComboBox.FormattingEnabled = true;
+            this.RFIDComboBox.Items.AddRange(new object[] {
+            "无",
+            "RC522",
+            "M401C"});
+            this.RFIDComboBox.Location = new System.Drawing.Point(65, 125);
+            this.RFIDComboBox.Name = "RFIDComboBox";
+            this.RFIDComboBox.Size = new System.Drawing.Size(174, 20);
+            this.RFIDComboBox.TabIndex = 27;
+            this.RFIDComboBox.TabStop = false;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(30, 128);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(29, 12);
+            this.label16.TabIndex = 26;
+            this.label16.Text = "RFID";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(6, 153);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(53, 12);
+            this.label17.TabIndex = 28;
+            this.label17.Text = "防撬报警";
+            // 
+            // HardwareForm
+            // 
+            this.HardwareForm.Location = new System.Drawing.Point(162, 182);
+            this.HardwareForm.Name = "HardwareForm";
+            this.HardwareForm.Size = new System.Drawing.Size(77, 29);
+            this.HardwareForm.TabIndex = 30;
+            this.HardwareForm.Text = "生成";
+            this.HardwareForm.UseVisualStyleBackColor = true;
+            this.HardwareForm.Click += new System.EventHandler(this.OnHardwareClick);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.AlarmCheckBox);
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.HardwareForm);
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.MCUComboBox);
+            this.groupBox2.Controls.Add(this.label17);
+            this.groupBox2.Controls.Add(this.FingerComboBox);
+            this.groupBox2.Controls.Add(this.RFIDComboBox);
+            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Controls.Add(this.label16);
+            this.groupBox2.Controls.Add(this.PasswordComboBox);
+            this.groupBox2.Controls.Add(this.WifiComboBox);
+            this.groupBox2.Controls.Add(this.label15);
+            this.groupBox2.Location = new System.Drawing.Point(762, 70);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(313, 346);
+            this.groupBox2.TabIndex = 31;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "硬件版本号";
+            // 
+            // AlarmCheckBox
+            // 
+            this.AlarmCheckBox.AutoSize = true;
+            this.AlarmCheckBox.Location = new System.Drawing.Point(67, 154);
+            this.AlarmCheckBox.Name = "AlarmCheckBox";
+            this.AlarmCheckBox.Size = new System.Drawing.Size(15, 14);
+            this.AlarmCheckBox.TabIndex = 31;
+            this.AlarmCheckBox.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(755, 419);
+            this.ClientSize = new System.Drawing.Size(1086, 429);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.PacketData);
             this.Controls.Add(this.FileInfoText);
             this.Controls.Add(this.label10);
@@ -370,6 +567,8 @@
             this.Text = "Hex打包";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -407,6 +606,20 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ComboBox sLockType;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox MCUComboBox;
+        private System.Windows.Forms.ComboBox FingerComboBox;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox PasswordComboBox;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ComboBox WifiComboBox;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox RFIDComboBox;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button HardwareForm;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.CheckBox AlarmCheckBox;
     }
 }
 

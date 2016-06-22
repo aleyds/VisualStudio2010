@@ -21,8 +21,14 @@ namespace Upgrade
             Times mTimes = new Times();
 
             EndDatePacker.Value = mTimes.ToDateTime((mTimes.ToUnixTime(mValue) + 31536000L).ToString());
-            SoftwareVersion.Text = "0x01";
-            HardwareVersion.Text = "0x12345678";
+            SoftwareVersion.Text = "0x03";
+            HardwareVersion.Text = "";
+            MCUComboBox.SelectedIndex = 0;
+            FingerComboBox.SelectedIndex = 1;
+            PasswordComboBox.SelectedIndex = 1;
+            WifiComboBox.SelectedIndex = 0;
+            RFIDComboBox.SelectedIndex = 0;
+            AlarmCheckBox.Checked = false;
         }
 
         public Form1()
@@ -287,6 +293,27 @@ namespace Upgrade
             {
                 MessageBox.Show("文件写入失败");
             }
+        }
+
+
+
+        private void OnHardwareClick(object sender, EventArgs e)
+        {
+            int HardwareVer = 0;
+            int AlarmEnable = 0;
+            if(AlarmCheckBox.Checked)
+            {
+                AlarmEnable = 1;
+            }
+            else
+            {
+                 AlarmEnable = 0;  
+            }
+
+            HardwareVer = MCUComboBox.SelectedIndex << 30 | FingerComboBox.SelectedIndex << 27 | PasswordComboBox.SelectedIndex<<25|
+                           WifiComboBox.SelectedIndex << 23 | RFIDComboBox.SelectedIndex << 21 | AlarmEnable<<20;
+           // String.Format("{0:X8}", HardwareVer)
+            HardwareVersion.Text = "0x"+String.Format("{0:X8}", HardwareVer);//Convert.ToString(1, 16);
         }
     }
 }

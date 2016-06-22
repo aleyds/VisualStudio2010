@@ -5,3 +5,10 @@ G:\VisualProgram\Upgrade\Upgrade\obj\Debug\Upgrade.Form1.resources
 G:\VisualProgram\Upgrade\Upgrade\obj\Debug\Upgrade.Properties.Resources.resources
 G:\VisualProgram\Upgrade\Upgrade\obj\Debug\Upgrade.exe
 G:\VisualProgram\Upgrade\Upgrade\obj\Debug\Upgrade.pdb
+H:\VisualStudio2010\trunk\DFUPacket\Upgrade\obj\Debug\Upgrade.exe
+H:\VisualStudio2010\trunk\DFUPacket\Upgrade\obj\Debug\Upgrade.pdb
+H:\VisualStudio2010\trunk\DFUPacket\Upgrade\bin\Debug\Upgrade.exe
+H:\VisualStudio2010\trunk\DFUPacket\Upgrade\bin\Debug\Upgrade.pdb
+H:\VisualStudio2010\trunk\DFUPacket\Upgrade\obj\Debug\ResolveAssemblyReference.cache
+H:\VisualStudio2010\trunk\DFUPacket\Upgrade\obj\Debug\Upgrade.Form1.resources
+H:\VisualStudio2010\trunk\DFUPacket\Upgrade\obj\Debug\Upgrade.Properties.Resources.resources
