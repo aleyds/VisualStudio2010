@@ -52,6 +52,8 @@
             this.txtForward = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textcustom = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.textAlarmOff = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -61,18 +63,18 @@
             this.label16 = new System.Windows.Forms.Label();
             this.textTorchOn = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.savePictureText = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxControlPort = new System.Windows.Forms.TextBox();
             this.textControlURL = new System.Windows.Forms.TextBox();
             this.textBoxVideo = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textcustom = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.savePictureText = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.folderBrowserPicture = new System.Windows.Forms.FolderBrowserDialog();
+            this.label13 = new System.Windows.Forms.Label();
+            this.textcustomOff = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -316,6 +318,8 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.label13);
+            this.groupBox4.Controls.Add(this.textcustomOff);
             this.groupBox4.Controls.Add(this.label11);
             this.groupBox4.Controls.Add(this.textcustom);
             this.groupBox4.Controls.Add(this.label10);
@@ -328,15 +332,34 @@
             this.groupBox4.Controls.Add(this.textTorchOn);
             this.groupBox4.Location = new System.Drawing.Point(391, 25);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(215, 156);
+            this.groupBox4.Size = new System.Drawing.Size(215, 187);
             this.groupBox4.TabIndex = 45;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "其他指令";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(8, 127);
+            this.label11.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(56, 17);
+            this.label11.TabIndex = 50;
+            this.label11.Text = "自定义开";
+            // 
+            // textcustom
+            // 
+            this.textcustom.Location = new System.Drawing.Point(65, 126);
+            this.textcustom.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.textcustom.Name = "textcustom";
+            this.textcustom.Size = new System.Drawing.Size(101, 23);
+            this.textcustom.TabIndex = 51;
+            this.textcustom.Text = "ff040000ff";
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(8, 100);
+            this.label10.Location = new System.Drawing.Point(20, 100);
             this.label10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(44, 17);
@@ -345,7 +368,7 @@
             // 
             // textAlarmOff
             // 
-            this.textAlarmOff.Location = new System.Drawing.Point(50, 99);
+            this.textAlarmOff.Location = new System.Drawing.Point(65, 99);
             this.textAlarmOff.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.textAlarmOff.Name = "textAlarmOff";
             this.textAlarmOff.Size = new System.Drawing.Size(101, 23);
@@ -355,7 +378,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(8, 47);
+            this.label9.Location = new System.Drawing.Point(20, 47);
             this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(44, 17);
@@ -364,7 +387,7 @@
             // 
             // textTorchOff
             // 
-            this.textTorchOff.Location = new System.Drawing.Point(50, 45);
+            this.textTorchOff.Location = new System.Drawing.Point(65, 45);
             this.textTorchOff.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.textTorchOff.Name = "textTorchOff";
             this.textTorchOff.Size = new System.Drawing.Size(101, 23);
@@ -374,7 +397,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(8, 74);
+            this.label20.Location = new System.Drawing.Point(20, 74);
             this.label20.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(44, 17);
@@ -383,7 +406,7 @@
             // 
             // textAlarmOn
             // 
-            this.textAlarmOn.Location = new System.Drawing.Point(50, 73);
+            this.textAlarmOn.Location = new System.Drawing.Point(65, 73);
             this.textAlarmOn.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.textAlarmOn.Name = "textAlarmOn";
             this.textAlarmOn.Size = new System.Drawing.Size(101, 23);
@@ -393,7 +416,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(8, 22);
+            this.label16.Location = new System.Drawing.Point(20, 22);
             this.label16.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(44, 17);
@@ -402,7 +425,7 @@
             // 
             // textTorchOn
             // 
-            this.textTorchOn.Location = new System.Drawing.Point(50, 20);
+            this.textTorchOn.Location = new System.Drawing.Point(65, 20);
             this.textTorchOn.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.textTorchOn.Name = "textTorchOn";
             this.textTorchOn.Size = new System.Drawing.Size(101, 23);
@@ -428,6 +451,35 @@
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "WIFI设置";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(534, 99);
+            this.button3.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(71, 23);
+            this.button3.TabIndex = 10;
+            this.button3.Text = "选择";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.OnPictureSaveClick);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(11, 104);
+            this.label12.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(56, 17);
+            this.label12.TabIndex = 13;
+            this.label12.Text = "图片路径";
+            // 
+            // savePictureText
+            // 
+            this.savePictureText.Location = new System.Drawing.Point(91, 99);
+            this.savePictureText.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.savePictureText.Name = "savePictureText";
+            this.savePictureText.Size = new System.Drawing.Size(433, 23);
+            this.savePictureText.TabIndex = 12;
             // 
             // label3
             // 
@@ -486,53 +538,24 @@
             this.textBoxVideo.TabIndex = 6;
             this.textBoxVideo.TextChanged += new System.EventHandler(this.textBoxVideo_TextChanged);
             // 
-            // label11
+            // label13
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(8, 127);
-            this.label11.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(44, 17);
-            this.label11.TabIndex = 50;
-            this.label11.Text = "自定义";
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(8, 154);
+            this.label13.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(56, 17);
+            this.label13.TabIndex = 52;
+            this.label13.Text = "自定义关";
             // 
-            // textcustom
+            // textcustomOff
             // 
-            this.textcustom.Location = new System.Drawing.Point(50, 126);
-            this.textcustom.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.textcustom.Name = "textcustom";
-            this.textcustom.Size = new System.Drawing.Size(101, 23);
-            this.textcustom.TabIndex = 51;
-            this.textcustom.Text = "ff040000ff";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(11, 104);
-            this.label12.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(56, 17);
-            this.label12.TabIndex = 13;
-            this.label12.Text = "图片路径";
-            // 
-            // savePictureText
-            // 
-            this.savePictureText.Location = new System.Drawing.Point(91, 99);
-            this.savePictureText.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.savePictureText.Name = "savePictureText";
-            this.savePictureText.Size = new System.Drawing.Size(433, 23);
-            this.savePictureText.TabIndex = 12;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(534, 99);
-            this.button3.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(71, 23);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "选择";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.OnPictureSaveClick);
+            this.textcustomOff.Location = new System.Drawing.Point(65, 153);
+            this.textcustomOff.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.textcustomOff.Name = "textcustomOff";
+            this.textcustomOff.Size = new System.Drawing.Size(101, 23);
+            this.textcustomOff.TabIndex = 53;
+            this.textcustomOff.Text = "ff040100ff";
             // 
             // Config
             // 
@@ -610,5 +633,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox savePictureText;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserPicture;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox textcustomOff;
     }
 }

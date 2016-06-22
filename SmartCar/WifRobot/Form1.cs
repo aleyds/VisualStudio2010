@@ -25,6 +25,7 @@ namespace WifiVideo
         private Boolean AlarmEnable = false;
 
         private Boolean FormKeyDown = false;
+        private Boolean CustomSwitch = false;
         //语音识别部分
      /*   private SpeechLib.ISpeechRecoGrammar isrg;
         private SpeechLib.SpSharedRecoContextClass ssrContex = null;
@@ -52,7 +53,7 @@ namespace WifiVideo
          string CMD_Forward = "", CMD_Backward = "", CMD_TurnLeft = "", CMD_TurnRight = "", CMD_Stop = "", CMD_EngineUpRest="",CMD_EngineLeft="",CMD_EngineRight="",CMD_EngineDownRest="",CMD_EngineUp="",CMD_EngineDown="";
          string CMD_LeftForward = "", CMD_RightForward = "", CMD_LeftBackward = "", CMD_RightBackward = "";
          string CMD_TorchOn = "", CMD_TorchOff = "", CMD_AlarmOn = "", CMD_AlarmOff = "";
-         string CMD_Custom = "";
+         string CMD_Custom = "", CMD_CustomOff = "";
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -292,6 +293,7 @@ namespace WifiVideo
             CMD_AlarmOn = ReadIni("ControlCommand", "CMD_AlarmOn", "");
             CMD_AlarmOff = ReadIni("ControlCommand", "CMD_AlarmOff", "");
             CMD_Custom = ReadIni("ControlCommand", "CMD_Custom", "");
+            CMD_CustomOff = ReadIni("ControlCommand", "CMD_CustomOff", "");
             //舵机
             CMD_EngineUpRest = ReadIni("ControlCommand", "CMD_EngineUpRest", "");//上复位
             CMD_EngineLeft = ReadIni("ControlCommand", "CMD_EngineLeft", "");    //上左转
@@ -681,7 +683,17 @@ namespace WifiVideo
      
         private void OnCustomClick(object sender, EventArgs e)
         {
-            SendData(CMD_Custom);
+            if (!CustomSwitch)
+            {
+                CustomSwitch = true;
+                SendData(CMD_Custom);
+            }
+            else
+            {
+                CustomSwitch = false;
+                SendData(CMD_CustomOff);
+            }
+            
         }
 
         private void SteerSlide1_Scroll(object sender, MouseEventArgs e)

@@ -48,6 +48,7 @@ namespace WifiVideo
             WriteIni("ControlCommand", "CMD_AlarmOn", this.textAlarmOn.Text);
             WriteIni("ControlCommand", "CMD_AlarmOff", this.textAlarmOff.Text);
             WriteIni("ControlCommand", "CMD_Custom", this.textcustom.Text);
+            WriteIni("ControlCommand", "CMD_CustomOff", this.textcustomOff.Text);
              
             //WriteIni("ControlCommand", "CMD_EngineLeft", this.txtEngineLeft.Text);
             //WriteIni("ControlCommand", "CMD_EngineUpRest", this.txtEngineUpRest.Text);
@@ -104,6 +105,7 @@ namespace WifiVideo
             this.textAlarmOn.Text = ReadIni("ControlCommand", "CMD_AlarmOn", "");
             this.textAlarmOff.Text = ReadIni("ControlCommand", "CMD_AlarmOff", "");
             this.textcustom.Text = ReadIni("ControlCommand", "CMD_Custom", "");
+            this.textcustomOff.Text = ReadIni("ControlCommand", "CMD_CustomOff", "");
 
          
             //Engine
