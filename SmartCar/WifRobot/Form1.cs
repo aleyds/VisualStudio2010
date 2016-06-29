@@ -60,9 +60,19 @@ namespace WifiVideo
                 timer1.Enabled = true;
         }
 
+        private void ThreadVedio()
+        {
+            Image netImage = Image.FromStream(WebRequest.Create(CameraIp).GetResponse().GetResponseStream());
+            VedioPicture.Image = netImage;
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
-            VedioPicture.ImageLocation = CameraIp;// "http://192.168.1.1:8080/?action=snapshot";
+           // VedioPicture.ImageLocation = CameraIp;// "http://192.168.1.1:8080/?action=snapshot";
+            //Image netImage = Image.FromStream(WebRequest.Create(CameraIp).GetResponse().GetResponseStream());
+            //VedioPicture.Image = netImage;
+            Thread myThread = new Thread(ThreadVedio);
+            myThread.Start();
         }
 
         private byte[] StringToByte(String Str)
