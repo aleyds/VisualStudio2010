@@ -29,6 +29,8 @@ namespace Upgrade
             WifiComboBox.SelectedIndex = 0;
             RFIDComboBox.SelectedIndex = 0;
             AlarmCheckBox.Checked = false;
+            SaveFileText.Text = "sLock3-firmware-" + DateTime.Now.ToString().Replace(" ", ".").Replace("/", "-").Replace(":", "-") + ".m2";
+            
         }
 
         public Form1()

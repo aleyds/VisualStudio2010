@@ -222,7 +222,7 @@ namespace WifiVideo
                 SteerValue--;
             }
             SteerSlide2.Value = SteerValue;
-            string CMD_Steer2 = SteerCommand(1, (byte)SteerValue);
+            string CMD_Steer2 = SteerCommand(2, (byte)SteerValue);
             SendData(CMD_Steer2);
         }
 
