@@ -68,11 +68,11 @@ namespace WifiVideo
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-           // VedioPicture.ImageLocation = CameraIp;// "http://192.168.1.1:8080/?action=snapshot";
+            VedioPicture.ImageLocation = CameraIp;// "http://192.168.1.1:8080/?action=snapshot";
             //Image netImage = Image.FromStream(WebRequest.Create(CameraIp).GetResponse().GetResponseStream());
             //VedioPicture.Image = netImage;
-            Thread myThread = new Thread(ThreadVedio);
-            myThread.Start();
+            //Thread myThread = new Thread(ThreadVedio);
+           // myThread.Start();
         }
 
         private byte[] StringToByte(String Str)
