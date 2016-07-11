@@ -73,6 +73,7 @@
             this.HardwareForm = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.AlarmCheckBox = new System.Windows.Forms.CheckBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -138,7 +139,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(77, 29);
             this.button3.TabIndex = 16;
-            this.button3.Text = "执行";
+            this.button3.Text = "打包";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.OnExecute);
             // 
@@ -323,10 +324,12 @@
             // 
             this.loadUpgradeFile.FileName = "Upgrade.Hex";
             this.loadUpgradeFile.Filter = "All File(*.*)|*.*|Hex(*.Hex)|*.Hex|M2 File(*.m2)|*.m2|Bin File(*.bin)|*.bin";
+            this.loadUpgradeFile.FilterIndex = 4;
             // 
             // saveUpgradeFile
             // 
             this.saveUpgradeFile.Filter = "All File(*.*)|*.*|M2 File(*.m2)|*.m2";
+            this.saveUpgradeFile.FilterIndex = 2;
             // 
             // label9
             // 
@@ -511,7 +514,7 @@
             this.HardwareForm.Name = "HardwareForm";
             this.HardwareForm.Size = new System.Drawing.Size(77, 29);
             this.HardwareForm.TabIndex = 30;
-            this.HardwareForm.Text = "生成";
+            this.HardwareForm.Text = "版本号生成";
             this.HardwareForm.UseVisualStyleBackColor = true;
             this.HardwareForm.Click += new System.EventHandler(this.OnHardwareClick);
             // 
@@ -532,7 +535,7 @@
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Location = new System.Drawing.Point(762, 70);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(313, 346);
+            this.groupBox2.Size = new System.Drawing.Size(313, 225);
             this.groupBox2.TabIndex = 31;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "硬件版本号";
@@ -546,11 +549,22 @@
             this.AlarmCheckBox.TabIndex = 31;
             this.AlarmCheckBox.UseVisualStyleBackColor = true;
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(924, 339);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(100, 57);
+            this.button4.TabIndex = 32;
+            this.button4.Text = "上传服务器";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.OnUploadFile);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1086, 429);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.PacketData);
             this.Controls.Add(this.FileInfoText);
@@ -620,6 +634,7 @@
         private System.Windows.Forms.Button HardwareForm;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.CheckBox AlarmCheckBox;
+        private System.Windows.Forms.Button button4;
     }
 }
 

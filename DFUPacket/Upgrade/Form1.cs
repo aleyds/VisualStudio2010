@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using System.Text.RegularExpressions;
+using System.Diagnostics;
 
 namespace Upgrade
 {
@@ -23,12 +24,12 @@ namespace Upgrade
             EndDatePacker.Value = mTimes.ToDateTime((mTimes.ToUnixTime(mValue) + 31536000L).ToString());
             SoftwareVersion.Text = "0x03";
             HardwareVersion.Text = "";
-            MCUComboBox.SelectedIndex = 0;
-            FingerComboBox.SelectedIndex = 1;
-            PasswordComboBox.SelectedIndex = 1;
-            WifiComboBox.SelectedIndex = 0;
+            MCUComboBox.SelectedIndex = 1;
+            FingerComboBox.SelectedIndex = 0;
+            PasswordComboBox.SelectedIndex = 0;
+            WifiComboBox.SelectedIndex = 1;
             RFIDComboBox.SelectedIndex = 0;
-            AlarmCheckBox.Checked = false;
+            AlarmCheckBox.Checked = true;
             SaveFileText.Text = "sLock3-firmware-" + DateTime.Now.ToString().Replace(" ", ".").Replace("/", "-").Replace(":", "-") + ".m2";
             
         }
@@ -68,6 +69,7 @@ namespace Upgrade
             if (loadUpgradeFile.ShowDialog() == DialogResult.OK)
             {
                 LoadFilePath = loadUpgradeFile.FileName;
+               
                 LoadFileText.Text = LoadFilePath;
                 Documents mDocuments = new Documents(LoadFilePath);
                 if (mDocuments.getType() == Documents.FileType._FILE_HEX)
@@ -80,6 +82,7 @@ namespace Upgrade
                 {
                     FileInfo minfo = mDocuments.getFileInfo();
                     FileInfoText.Text = "M2 文件\n" + "文件名:" + minfo.Name + "\n文件大小:" + minfo.Length + "Byte" + "(" + (UInt32)(minfo.Length / 1024.0) + "KB)\n";
+                    SaveFileText.Text = loadUpgradeFile.FileName;
                     HandInfoSet(LoadFilePath);
                 }
                 else if (mDocuments.getType() == Documents.FileType._FILE_BIN)
@@ -316,6 +319,31 @@ namespace Upgrade
                            WifiComboBox.SelectedIndex << 23 | RFIDComboBox.SelectedIndex << 21 | AlarmEnable<<20;
            // String.Format("{0:X8}", HardwareVer)
             HardwareVersion.Text = "0x"+String.Format("{0:X8}", HardwareVer);//Convert.ToString(1, 16);
+        }
+
+        private void OnUploadFile(object sender, EventArgs e)
+        {
+           // System.Diagnostics.Process.Start("http://www.baidu.com");
+
+            if (!File.Exists(SaveFileText.Text))
+            {
+                MessageBox.Show(SaveFileText.Text+"文件不存在，请先打包文件");
+                return;
+            }
+            
+            Process myProcess = new Process();
+            try
+            {
+                myProcess.StartInfo.UseShellExecute = false;
+                myProcess.StartInfo.FileName = "firmware_gui.exe";
+                myProcess.StartInfo.Arguments = "" + SaveFileText.Text;
+                myProcess.StartInfo.CreateNoWindow = true;
+                myProcess.Start();
+            }
+            catch (Exception el)
+            {
+                Console.WriteLine(el.Message);
+            } 
         }
     }
 }
